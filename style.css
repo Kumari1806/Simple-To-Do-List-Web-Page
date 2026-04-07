@@ -1,0 +1,97 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;                                     /* Changed to min-height for better scrolling on mobile */
+    background-color: rgb(196, 148, 148);
+    font-family: sans-serif;                               /* Added for better readability */
+}
+
+.container {
+    border: none;          
+    border-radius: 15px;                                   /*to make border rounded from all sides*/
+    background-color: rgb(218, 185, 209);
+    height: auto;                                          /*adapt the height as the task is added*/
+    width: 90%;                                            /* Responsive width: 90% on small screens, max 400px on large screens */
+    max-width: 400px; 
+    box-shadow: 4px 5px 15px rgba(203, 8, 8, 0.2);
+    padding-bottom: 20px;
+}
+
+.header {
+    text-align: center;                                    /*to make text in center*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    font-size: 1.7em;
+    font-weight: 900;                                      /*to make text bold*/
+    border-bottom: 0.5px solid rgb(146, 128, 128);       /*line below the text*/
+    margin-bottom: 20px;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-evenly;       
+    padding: 0 10px;
+    gap: 10px;                                             /* Adds spacing between input and button */
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(197, 48, 18);                             /*text color*/
+    border: 1px solid #a10a0a;
+    background-color: rgb(245, 198, 189);
+    flex: 1;                                               /* Allows input to take up available space */
+}
+
+button {
+    background-color: rgb(233, 197, 173);
+    color: rgb(167, 18, 18);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {       
+    border: 1px solid rgb(187, 22, 22);
+    box-shadow: 2px 2px 2px;
+    background-color: rgb(235, 124, 45);                 /*color changes as cursor points button*/
+}
+
+ul {
+    list-style: none;
+    padding: 20px;
+    
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(161, 84, 84,07, 85, 85);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 7px;
+    background-color: rgba(142, 81, 81, 0.3);
+}
+
+/* Media Query for very small devices */
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.4em;
+    }
+    
+    .addTask {
+        flex-direction: column;                           /* Stacks input and button vertically */
+    }
+    
+    input, button {
+        width: 100%;
+    }
+}
